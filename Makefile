@@ -8,7 +8,11 @@ all: dome
 %.pdf: %.svg
 	inkscape --export-pdf $(@) $(<)
 
-dome: $(TARGET) $(SVG:.svg=.pdf)
+convention: convention.tex
+
+	TEXFONTS=:./fonts TEXINPUTS=:./fonts pdflatex $@
+
+dome: $(TARGET) convention $(SVG:.svg=.pdf)
 
 	TEXFONTS=:./fonts TEXINPUTS=:./fonts pdflatex $(TARGET)
 
