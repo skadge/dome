@@ -38,6 +38,8 @@
 \usepackage{enumerate}
 
 \usepackage{pdfpages} %% To add a cover to the doc
+\usepackage{booktabs}
+\usepackage{rotating}
 
 % Fixme notes
 \usepackage[draft,footnote,marginclue]{fixme}
@@ -107,6 +109,38 @@ Séverin Lemaignan
 \chapter{Description technique}
 
 \chapter{Budget prévisionnel}
+
+%\begin{sidewaystable}
+\begin{center}
+\begin{tabular}{lrlr}
+    \toprule
+    Intitulé      & Montant \\
+    \midrule
+    
+    \textbf{Dôme}                         &          \\
+    \phantom{ZZ}Tubes acier               &    300   \\
+    \phantom{ZZ}Peinture                  &     50   \\
+    \phantom{ZZ}Visserie                  &     50   \\
+    \phantom{ZZ}Bâche                     &   1500   \\
+    \textit{Sous-total dôme}              & \underline{1900} \\
+    
+    \textbf{Équipement projection}        &           \\
+    \phantom{ZZ}Vidéoprojecteur           &    1500   \\
+    \phantom{ZZ}Lentille fish-eye         &     150   \\
+    \phantom{ZZ}Matériel optique          &     250   \\
+    \textit{Sous-total vidéo}             & \underline{1900} \\
+    
+    \textbf{Outillage}                    &           \\
+    \phantom{ZZ}Presse                    &     200   \\
+    \phantom{ZZ}Petit outillage (pinceaux...) &  50   \\
+    \textit{Sous-total outillage}         & \underline{250} \\
+    
+    \textbf{Total}                        & \fbox{4050} \\
+    \bottomrule                
+    \end{tabular}
+
+\end{center}    
+%\end{sidewaystable}
 
 \chapter{Annexe : proposition de convention inter-associative}
 
