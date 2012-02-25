@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Projet Dome geodesique              %%
+%%                                             %%
+%%   Planète Sciences / InCOGnu / Tetalab      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Authors: Séverin Lemaignan
+
+
+\documentclass[a4paper,12pt]{book}
+
+\usepackage{fullpage}
+
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+
+\usepackage{ifthen}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+\pdfmapfile{+ubuntu-regular.map}
+\pdfmapfile{+ubuntu-it.map}
+\pdfmapfile{+ubuntu-bold.map}
+\renewcommand{\rmdefault}{Ubuntu}
+
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{wrapfig}
+\usepackage{fancyhdr} %headers and footers
+\pagestyle{fancy}
+
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{sectsty}
+
+\usepackage{enumerate}
+
+\usepackage{pdfpages} %% To add a cover to the doc
+
+% Fixme notes
+\usepackage[draft,footnote,marginclue]{fixme}
+
+
+\usepackage[french]{babel}
+
+\graphicspath{{images/}}
+
+%################# En-tête et pieds de page avec fancyhdr
+\headheight=14.85pt
+%pour récupérer les noms de section en minuscule
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+\fancyhf{}
+\fancyhead[RO,LE]{\bfseries\leftmark}
+%\fancyhead[LE]{\rightmark}
+\fancyfoot[LE,RO]{\bfseries\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+%\addtolength{\headheight}{2pt}
+\addtolength{\headsep}{20pt}
+\addtolength{\footskip}{10pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+	\includegraphics[width=7cm]{logos.pdf}\\
+	\vfill
+	\includegraphics[width=5cm]{general.pdf}\\
+	\vspace{3em}
+	\LARGE{\textbf{Dôme géodésique}}\\[1cm]
+	\large{Projet inter-associatif d'espace d'expérimentation et de projection}\\[1cm]
+	\vfill
+}
+
+\author{
+Séverin Lemaignan
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\IfFileExists{cover.pdf}{
+\includepdf[pages=-, fitpaper]{cover.pdf}
+\thispagestyle{empty}
+\cleardoublepage
+}
+
+\maketitle
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+
+\chapter{Finalité}
+
+\chapter{Activités prévues}
+
+\chapter{Description technique}
+
+\chapter{Budget prévisionnel}
+
+\chapter{Annexe : proposition de convention inter-associative}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\thispagestyle{empty}
+~
+\vfill
+\begin{center}
+	L'ensemble de ce projet est diffusé sous license libre Creative Commons Paternité-Partage à l'identique.\\
+	\vspace{2cm}
+	\includegraphics[scale=0.5]{logo_cc.png}
+\end{center}
+
+\vfill
+
+\begin{center}
+	Les sources de ce document peuvent être téléchargées depuis le site GitHub.
+	\url{http://github.com/skadge/dome/}
+\end{center}
+
+\vfill
+
+\end{document}
+
